@@ -23,7 +23,9 @@ class HomePageTests(TestCase):
         self.assertTemplateUsed(response, "taxi/index.html")
         self.assertEqual(response.context["num_drivers"], num_drivers)
         self.assertEqual(response.context["num_cars"], num_cars)
-        self.assertEqual(response.context["num_manufacturers"], num_manufacturers)
+        self.assertEqual(
+            response.context["num_manufacturers"], num_manufacturers
+        )
 
 
 class IsStylesCSSExistTests(TestCase):
